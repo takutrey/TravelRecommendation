@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommender</title>
+    <style>
+        /* Basic styling for the navigation bar */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        
+        .navbar a {
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        
+        .search-area {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            padding: 6px;
+            margin-left: auto;
+            background-color: white;
+            margin-right: 20px;
+        }
+        
+        .search-area input[type=text] {
+            padding: 10px;
+            width: 200px;
+            border: none;
+            font-size: 16px;
+        }
+        
+        .search-area button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+        }
+        
+        .search-area button:hover {
+            background-color: black;
+        }
+        
+        .search-icon {
+            padding: 0 10px;
+        }
+        
+        .company-logo {
+            margin-right: 20px;
+        }
+        .navbar h1{
+            color: white;
+        }
+    </style>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.vietcetera.com/uploads/images/11-nov-2021/thumbnail-travelhub.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Ensure full viewport height */
+            display: flex;
+            flex-direction: column;
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            max-width: 500px;
+            padding: 20px;
+            background: none; 
+            border-radius: 50px;
+            backdrop-filter: blur(5px); 
+            margin-top: 100px
+        }
+        h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .social-icons {
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 1.5em;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ff6347; /* Change color on hover */
+        }
+    </style>
+    
+</head>
+<body>
+
+<div class="navbar">
+    <div class="company-logo">
+        <img src="https://www.shutterstock.com/image-vector/travel-line-logo-pin-location-260nw-2200612665.jpg" alt="Company Logo" width="50">
+    </div>
+    <h1>Travel Recommender</h1>
+    <a href="travel_recommendation.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <form id="searchForm">
+    <div class="search-area">
+        
+        <input type="text" id="searchInput" placeholder="Enter keywords...">
+        <div class="search-icon">
+            <img src="data:image/jpeg;base64,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" alt="Search Icon" width="40">
+        </div>
+        <button type="submit" id="searchButton">Search</button>
+        <button type="button" id="resetButton">Reset</button>
+   
+    </div>
+</form>
+<!-- Container to display search results -->
+<div id="searchResults">
+    <!-- Results will be dynamically inserted here -->
+</div>
+
+</div>
+<div class="container">
+    <h2>Create memories that last a lifetime!</h2>
+    <p>Explore the world with our curated travel guides and recommendations. Whether you're looking for adventure, relaxation, or cultural experiences, we've got you covered!</p>
+    
+    <div class="social-icons">
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+</div>
+
+<script src="travel_recommendation.js"></script>
+
+</body>
+</html>

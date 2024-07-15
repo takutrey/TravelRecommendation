@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Travel Recommender</title>
+    <style>
+        /* Basic styling for the navigation bar */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        
+        .navbar a {
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .company-logo {
+            margin-right: 20px;
+        }
+        .navbar h1{
+            color: white;
+        }
+    </style>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.vietcetera.com/uploads/images/11-nov-2021/thumbnail-travelhub.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Ensure full viewport height */
+            display: flex;
+            flex-direction: column;
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            text-align: center;
+        }
+        .contact-form {
+            background-color: transparent;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-left: 200px;
+            margin-right:200px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 5px;
+            font-size: 1em;
+            border: none;
+            border-radius: 4px;
+            
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+            background-color: tranparent;
+        }
+        .form-group input[type="submit"] {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="company-logo">
+        <img src="https://www.shutterstock.com/image-vector/travel-line-logo-pin-location-260nw-2200612665.jpg" alt="Company Logo" width="50">
+    </div>
+    <h1>Travel Recommender</h1>
+    <a href="travel_recommendation.html">Home</a>
+    <a href="About.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+</div>
+
+<div class="contact-form">
+    <h2>Contact Us</h2>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
